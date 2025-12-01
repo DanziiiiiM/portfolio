@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+  font-family: myFont; /* set name */
+  src: url(Fonts/Lato-Regular.ttf); /* url of the font */
+}
+:root{
+
+    --menu: #69dcff;
+    --beige: rgb(218, 218, 218);
+    --darkgreen: #00201E;
+}
+
+.body-homepage{
+background-color: rgb(218, 218, 218);
+
+}
+.nav-homepage{
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--menu);
+}
+.menulink-homepage {
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+    padding: 1.5rem;
+    font-family: Helvetica;
+    font-size: 2.5rem;
+    
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: Helvetica;
+}
+p {
+  font-family: myFont; /* use font */
+}
+
+.h1-homepage{
+    margin: auto 0;
+    
+}
