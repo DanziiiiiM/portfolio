@@ -1,38 +1,49 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+.body-homepage {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: Helvetica, Arial, sans-serif;
+    min-height: 100vh;
+}
+
+
 @font-face {
   font-family: myFont; /* set name */
   src: url(Fonts/Lato-Regular.ttf); /* url of the font */
 }
-:root{
-
-    --menu: #69dcff;
-    --beige: rgb(218, 218, 218);
-    --darkgreen: #00201E;
+:root {
+    --bg: #EBEBEB;             /* Base background */
+    --text: #00171F;           /* Standard tekst + overskrifter */
+    --primary: #003459;        /* Primær brand blå */
+    --accent: #007EA7;         /* UI accent (links, hover) */
+    --accent-strong: #00A8E8;  /* CTA farve */
+    --white: #ffffff;
 }
 
-.body-homepage{
-background-color: rgb(218, 218, 218);
 
-}
-.nav-homepage{
+
+.nav-homepage {
     display: flex;
-    justify-content: space-around;
-    background-color: var(--menu);
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background-color: var(--accent);
 }
+
 .menulink-homepage {
-    list-style-type: none;
+    list-style: none;
     text-decoration: none;
-    color: black;
-    padding: 1.5rem;
-    font-family: Helvetica;
-    font-size: 2.5rem;
-    
+    font-size: 1.2rem;
+    color: var(--white);     /* vigtigt for kontrast */
+    padding: 0 .5rem;
 }
+
+
 
 h1, h2, h3, h4, h5, h6{
     font-family: Helvetica;
@@ -41,7 +52,211 @@ p {
   font-family: myFont; /* use font */
 }
 
-.h1-homepage{
-    margin: auto 0;
+.forside-main {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.forside-main h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.first{
+ padding-bottom: 4em;
+}
+.cardsection {
+    display: flex;
+    flex-direction: column;     /* mobil first */
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.cards {
+    background-color: var(--primary);
+    height: 220px;
+    border-radius: 8px;
+    transition: all 1s ease;
+
+}
+
+
+.cards h3{
+    color: var(--white);
+}
+.cards img{
+    width: 100%;
+}
+
+.animations-divs{
+
+}
+
+
+
+
+
+
+.animation{
+  padding-bottom: 4em;
+}
+.animations-divs{
+    width: 0%;
+    height: 100px;
+    background: var(--accent-strong);
+    animation: rotateBitch 5s ease infinite;
+}
+@keyframes rotateBitch{
+    to{
+        width: 100%;
+    }
+}
+.animations-divs2{
+    width: 100%;
+    height: 100px;
+    background: var(--accent);
+    animation: rotateBitch2 5s ease infinite;
+}
+@keyframes rotateBitch2{
+    to{
+        width: 0%;
+    }
+}
+
+
+
+
+
+.animations-divs3{
+    width: 0%;
+    height: 100px;
+    background: var(--accent-strong);
+    animation: rotateBitch 5s ease infinite;
+}
+@keyframes rotateBitch{
+    to{
+        width: 100%;
+    }
+}
+.animations-divs4{
+    width: 100%;
+    height: 100px;
+    background: var(--accent);
+    animation: rotateBitch2 5s ease infinite;
+}
+@keyframes rotateBitch2{
+    to{
+        width: 0%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 600px) {
+    .nav-homepage {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .menulink-homepage {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    .first {
+        padding: 0 1rem;
+    }
+        .cards {
+        width: 30%;
+        height: 250px;
+    }
+}
+/* TABLET */
+@media (min-width: 768px) {
+    .nav-homepage {
+        padding: 1.5rem 2rem;
+    }
+
+    .menulink-homepage {
+        font-size: 1.3rem;
+    }
+
+    .forside-main h1 {
+        font-size: 2.3rem;
+    }
+
+    .cardsection {
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .cards {
+        width: 30%;
+        height: 150px;
+    }
+}
+
+/* DESKTOP */
+@media (min-width: 1080px) {
+    .nav-homepage {
+        justify-content: space-around;
+        gap: 4rem;
+        padding: 2rem 4rem;
+    }
+
+    .menulink-homepage {
+        font-size: 1.6rem;
+    }
+
+    .forside-main {
+        padding: 2rem 0;
+    }
+
+    .forside-main h1 {
+        font-size: 2.8rem;
+    }
+    .first h2{
+        text-align: left;
+        padding-left: 2em;
+    }
+    .cardsection {
+        width: 90%;
+        margin: 0 auto;
+        gap: 3rem;
+    }
+
+    .cards {
+        height: 250px;
+    }
     
 }
